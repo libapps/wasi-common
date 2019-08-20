@@ -1,3 +1,6 @@
+// Temporarily disabled to avoid recursive dependencies for publishing
+// on crates.io.
+/*
 use cranelift_codegen::settings;
 use std::path::Path;
 use wasmtime_jit::Context;
@@ -45,3 +48,4 @@ pub fn instantiate(data: &[u8], bin_name: &str, workspace: Option<&Path>) -> Res
         .map(|_| ())
         .map_err(|e| format!("error while processing main module '{}': {}", bin_name, e))
 }
+*/

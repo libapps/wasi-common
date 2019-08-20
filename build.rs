@@ -19,8 +19,10 @@ fn main() {
     let mut out = File::create(out_dir.join("misc_testsuite_tests.rs"))
         .expect("error generating test source file");
 
-    build_tests("misc_testsuite", &out_dir).expect("building tests");
-    test_directory(&mut out, "misc_testsuite", &out_dir).expect("generating tests");
+    // Temporarily disabled to avoid recursive dependencies for publishing
+    // on crates.io.
+    //build_tests("misc_testsuite", &out_dir).expect("building tests");
+    //test_directory(&mut out, "misc_testsuite", &out_dir).expect("generating tests");
 }
 
 fn build_tests(testsuite: &str, out_dir: &Path) -> io::Result<()> {
