@@ -27,6 +27,7 @@ fn dec_ptr_mut(memory: &mut [u8], ptr: wasm32::uintptr_t, len: usize) -> Result<
         .map(|mem| mem.as_mut_ptr())
 }
 
+pub(crate)
 fn dec_ptr_to<'memory, T>(memory: &'memory [u8], ptr: wasm32::uintptr_t) -> Result<&'memory T> {
     // check that the ptr is aligned
     if ptr as usize % align_of::<T>() != 0 {

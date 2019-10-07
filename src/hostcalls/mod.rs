@@ -1,10 +1,12 @@
 mod fs;
 mod misc;
 mod sock;
+mod wassh;
 
 pub use self::fs::*;
 pub use self::misc::*;
 pub use self::sock::*;
+pub use self::wassh::*;
 
 use crate::{host, memory, wasm32};
 
